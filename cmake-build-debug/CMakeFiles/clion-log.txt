@@ -1,0 +1,5 @@
+/home/andrew/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/andrew/git/ds_gost
+-- GMP libs: /usr/lib/libgmp.so /usr/lib/libgmpxx.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/andrew/git/ds_gost/cmake-build-debug

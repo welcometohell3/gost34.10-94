@@ -1,0 +1,3 @@
+/home/andrew/git/ds_gost/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/andrew/git/ds_gost/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/andrew/git/ds_gost/cmake-build-debug/CMakeFiles/ds_gost.dir

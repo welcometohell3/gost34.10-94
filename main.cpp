@@ -18,7 +18,8 @@ int main()
 
     Signature fileSig;
     fileSig.readFromFile("file.sg");
-    fileSig.verify(sig.attributes.p, sig.attributes.q, sig.attributes.a, sig.attributes.y, hash_t);
+    fileSig.verify(sig.attributes.p, sig.attributes.q,
+                   sig.attributes.a, sig.attributes.y, hash_t);
 
     return 0;
 }
