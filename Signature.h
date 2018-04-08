@@ -19,13 +19,13 @@ public:
     public:
         Attributes() = default;
 
-
-        void generate(bool random = true);
+        void generate(const mpz_t pass, bool random = true);
 
         mpz_t p;
         mpz_t q;
         mpz_t a;
         mpz_t y; // public key
+
         LinearGenerator g{0x3DFC46F1, 97781173, 0xD, (long) pow(2, 32)};
     protected:
         std::vector<mpz_t> generatePrimes512();
@@ -34,7 +34,7 @@ public:
 
         void generateA();
 
-        void keys();
+        void keys(const mpz_t pass);
 
         mpz_t x; // secret key
     } attributes;

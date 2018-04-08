@@ -1,7 +1,3 @@
-//
-// Created by andrew on 25.03.18.
-//
-
 #ifndef DS_GOST_LINEARGENERATOR_H
 #define DS_GOST_LINEARGENERATOR_H
 
@@ -51,4 +47,4 @@ private:
 };
 
 
-#endif //DS_GOST_LINEARGENERATOR_H
+#endif

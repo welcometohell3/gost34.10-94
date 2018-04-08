@@ -1,7 +1,3 @@
-//
-// Created by andrew on 11.03.18.
-//
-
 #include "Signature.h"
 
 void Signature::make()
@@ -13,10 +9,9 @@ void Signature::make()
     // If hash mod q = 0 then set it to 1
     (mpz_divisible_p(hash, attributes.q)) ? mpz_init_set_ui(h, 1u) : mpz_init_set(h, hash);
 
-
     mpz_init(k);
     gmp_randinit_mt(rand);
-    gmp_randseed_ui(rand, 0x3CD13B26u);
+    gmp_randseed_ui(rand, attributes.g.getSeed());
 
     // Get random k
     mpz_urandomm(k, rand, attributes.q);
@@ -124,7 +119,7 @@ std::vector<mpz_t> Signature::Attributes::generatePrimes512()
 {
     gmp_randstate_t rand;
     gmp_randinit_mt(rand);
-    gmp_randseed_ui(rand, 0x3CD13B26u);
+    gmp_randseed_ui(rand, g.getSeed());
     int bitLength = 512;
     std::vector<int> t;
     t.push_back(bitLength);
@@ -260,7 +255,7 @@ std::vector<mpz_t> Signature::Attributes::generatePrimes512()
 
             mpz_t one;
             mpz_init_set_ui(one, 1u);
-            int res1 = mpz_cmp(tmp, one);
+
             if ((mpz_cmp(tmp, one) != 0) || (mpz_cmp(tmp2, one) == 0))
             {
                 flag = false;
@@ -455,7 +450,7 @@ void Signature::Attributes::generateA()
     int bitLength = 1024;
     gmp_randstate_t rand;
     gmp_randinit_mt(rand);
-    gmp_randseed_ui(rand, 0x3CD13B26u);
+    gmp_randseed_ui(rand, g.getSeed());
     mpz_t d;
     mpz_t f;
 
@@ -478,18 +473,16 @@ void Signature::Attributes::generateA()
     mpz_clear(f);
 }
 
-void Signature::Attributes::keys()
+void Signature::Attributes::keys(const mpz_t pass)
 {
-    // TODO: GET THIS FROM PASSWORD OR GENERATE
-    mpz_init_set_str(x, "30363145 38303830 34363045 42353244"
-            "35324234 31413237 38324331 38443046", 16);
+    mpz_set(x, pass);
 
     // y = (a ^ x) % p;
     mpz_init(y);
     mpz_powm_sec(y, a, x, p);
 }
 
-void Signature::Attributes::generate(bool random)
+void Signature::Attributes::generate(const __mpz_struct *pass, bool random)
 {
     if (random)
     {
@@ -511,5 +504,8 @@ void Signature::Attributes::generate(bool random)
                 "8EBE2CD4 6AC3D849 5B142AA6 CE23E21C", 16);
     }
 
-    keys();
+    keys(pass);
+    unsigned long long seed = 0;
+    mpz_export(&seed, nullptr, -1, sizeof seed, 0, 0, pass);
+    g.setSeed(seed);
 }

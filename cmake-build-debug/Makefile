@@ -123,33 +123,6 @@ ds_gost/fast:
 	$(MAKE) -f CMakeFiles/ds_gost.dir/build.make CMakeFiles/ds_gost.dir/build
 .PHONY : ds_gost/fast
 
-LinearGenerator.o: LinearGenerator.cpp.o
-
-.PHONY : LinearGenerator.o
-
-# target to build an object file
-LinearGenerator.cpp.o:
-	$(MAKE) -f CMakeFiles/ds_gost.dir/build.make CMakeFiles/ds_gost.dir/LinearGenerator.cpp.o
-.PHONY : LinearGenerator.cpp.o
-
-LinearGenerator.i: LinearGenerator.cpp.i
-
-.PHONY : LinearGenerator.i
-
-# target to preprocess a source file
-LinearGenerator.cpp.i:
-	$(MAKE) -f CMakeFiles/ds_gost.dir/build.make CMakeFiles/ds_gost.dir/LinearGenerator.cpp.i
-.PHONY : LinearGenerator.cpp.i
-
-LinearGenerator.s: LinearGenerator.cpp.s
-
-.PHONY : LinearGenerator.s
-
-# target to generate assembly for a file
-LinearGenerator.cpp.s:
-	$(MAKE) -f CMakeFiles/ds_gost.dir/build.make CMakeFiles/ds_gost.dir/LinearGenerator.cpp.s
-.PHONY : LinearGenerator.cpp.s
-
 Signature.o: Signature.cpp.o
 
 .PHONY : Signature.o
@@ -240,9 +213,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ds_gost"
-	@echo "... LinearGenerator.o"
-	@echo "... LinearGenerator.i"
-	@echo "... LinearGenerator.s"
 	@echo "... Signature.o"
 	@echo "... Signature.i"
 	@echo "... Signature.s"

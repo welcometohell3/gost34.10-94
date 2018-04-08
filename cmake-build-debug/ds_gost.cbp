@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/andrew/git/ds_gost/LinearGenerator.cpp">
+		<Unit filename="/home/andrew/git/ds_gost/InputParser.h">
 			<Option target="ds_gost"/>
 		</Unit>
 		<Unit filename="/home/andrew/git/ds_gost/LinearGenerator.h">

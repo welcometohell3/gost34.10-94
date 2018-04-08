@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/andrew/git/ds_gost/LinearGenerator.cpp
-LinearGenerator.h
-/home/andrew/git/ds_gost/LinearGenerator.h
+/home/andrew/git/ds_gost/InputParser.h
+string
+-
+algorithm
+-
+vector
+-
 
 /home/andrew/git/ds_gost/LinearGenerator.h
 vector
@@ -43,6 +47,8 @@ md5.h
 /home/andrew/git/ds_gost/md5.h
 Signature.h
 /home/andrew/git/ds_gost/Signature.h
+InputParser.h
+/home/andrew/git/ds_gost/InputParser.h
 
 /home/andrew/git/ds_gost/md5.cpp
 md5.h
