@@ -1,0 +1,3 @@
+/home/fil/Desktop/lab_5_crypt/build/CMakeFiles/ds_gost.dir
+/home/fil/Desktop/lab_5_crypt/build/CMakeFiles/edit_cache.dir
+/home/fil/Desktop/lab_5_crypt/build/CMakeFiles/rebuild_cache.dir

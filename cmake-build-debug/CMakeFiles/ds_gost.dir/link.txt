@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/ds_gost.dir/main.cpp.o CMakeFiles/ds_gost.dir/md5.cpp.o CMakeFiles/ds_gost.dir/Signature.cpp.o  -o ds_gost /usr/lib/libgmp.so 

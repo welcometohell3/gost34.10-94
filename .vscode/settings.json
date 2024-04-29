@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "ostream": "cpp",
+    "*.tcc": "cpp",
+    "bit": "cpp",
+    "functional": "cpp",
+    "random": "cpp",
+    "limits": "cpp",
+    "cmath": "cpp",
+    "tuple": "cpp"
+  }
+}
